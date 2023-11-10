@@ -24,7 +24,7 @@ export default function Header() {
 				</Link>
 				<Link  href={'/checkout'} className="relative w-fit">
 					<SfIconShoppingCart className='text-primary-600'/>
-					<SfBadge content={getCartTotal()} max={9} className="bg-gray-700" />
+					<SfBadge content={getCartTotal()} max={9} />
 				</Link>
 			</nav>
 		</header>

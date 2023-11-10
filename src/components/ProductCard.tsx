@@ -13,6 +13,7 @@ export default function ProductCard({ product, onClick }: { product: Product; on
 						className="object-contain h-auto rounded-md aspect-square"
 						width="300"
 						height="300"
+                        priority
 					/>
 				</div>
 				<SfButton
