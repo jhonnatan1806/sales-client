@@ -7,7 +7,7 @@ const HOST = "localhost";
 const QUEUE = "store";
 const AMQP_URL = `amqp://${USER}:${PASSWORD}@${HOST}`;
 
-const MESSAGE = "getProductos";
+const MESSAGE = "getproductos";
 
 export async function GET() {
     return new Promise((resolve, reject) => {
@@ -27,6 +27,7 @@ export async function GET() {
                     durable: false,
                 });
 
+                // mensaje = getProductos
                 channel.sendToQueue(QUEUE, Buffer.from(MESSAGE));
                     console.log(" [x] Sent %s", MESSAGE);
 

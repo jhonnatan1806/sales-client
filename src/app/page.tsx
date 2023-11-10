@@ -1,5 +1,5 @@
 'use client';
-import { Suspense, useState, useEffect } from 'react';
+import { Suspense, useState } from 'react';
 import { SfButton, SfLoaderCircular, SfIconPublishedWithChanges } from '@storefront-ui/react';
 import ProductCard from '@/components/ProductCard';
 import AlertPositive from '@/components/AlertPositive';
@@ -38,24 +38,6 @@ export default function HomePage() {
             console.error('Error fetching data:', error);
         }
     }
-/*
-	useEffect(() => {
-        if (cartState.cart.length > 0) return;
-		const fetchData = async () => {
-			try {
-				const response = await fetch('http://localhost:3000/api/store/');
-				if (response.ok) {
-					const data = await response.json();
-                    productDispatch({ type: 'UPDATE_PRODUCTS', payload: JSON.parse(data.message)})
-				} else {
-					console.error('Error:', response.status, response.statusText);
-				}
-			} catch (error) {
-				console.error('Error fetching data:', error);
-			}
-		};
-		fetchData();
-	}, [productState.products]);*/
 
 	return (
 		<>

@@ -8,6 +8,10 @@ const HOST = "localhost";
 const QUEUE = "sale";
 const AMQP_URL = `amqp://${USER}:${PASSWORD}@${HOST}`;
 
+const CLIENT_NAME = "Jonh";
+const CLIENT_SURNAME = "Doe";
+const CLIENT_RUC = "123456789";
+
 export async function POST(req: NextRequest) {
 
 	const body = (await req.json()) as CartItem[];
@@ -16,7 +20,7 @@ export async function POST(req: NextRequest) {
 	}
 
 	const cartItem: CartItem[] = body;
-	const productos = cartItem.map(({ product, quantity }: CartItem) => ({
+	const products = cartItem.map(({ product, quantity }: CartItem) => ({
 		id_prod: product.id_prod,
 		name_prod: product.name_prod,
 		unit: product.unit,
@@ -24,16 +28,16 @@ export async function POST(req: NextRequest) {
 		quantity: quantity,
 	}));
 
-	const ventas = {
+	const sales = {
 		usuario: {
-			nombres: 'Jonh',
-			apellidos: 'Doe',
-			ruc: '123456789',
+			nombres: CLIENT_NAME,
+			apellidos: CLIENT_SURNAME,
+			ruc: CLIENT_RUC,
 		},
-		productos: productos,
+		productos: products,
 	};
 
-	const message = JSON.stringify(ventas).toString();
+	const message = JSON.stringify(sales).toString();
 
 	return new Promise((resolve, reject) => {
 		amqp.connect(`amqp://${HOST}`, function (error0: Error | null, connection: amqp.Connection) {
