@@ -4,7 +4,7 @@ import {  NextResponse } from 'next/server';
 const USER = "guess";
 const PASSWORD = "guess";
 const HOST = "localhost";
-const QUEUE = "store";
+const QUEUE = "almacen";
 const AMQP_URL = `amqp://${USER}:${PASSWORD}@${HOST}`;
 
 const MESSAGE = "getproductos";

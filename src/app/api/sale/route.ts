@@ -5,7 +5,7 @@ import { NextRequest, NextResponse } from 'next/server';
 const USER = "guess";
 const PASSWORD = "guess";
 const HOST = "localhost";
-const QUEUE = "sale";
+const QUEUE = "ventas";
 const AMQP_URL = `amqp://${USER}:${PASSWORD}@${HOST}`;
 
 const CLIENT_NAME = "Jonh";
