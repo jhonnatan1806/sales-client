@@ -1,4 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+	transpilePackages: ['@storefront-ui/react'],
+	images: {
+		domains: ['m.media-amazon.com'],
+	},
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

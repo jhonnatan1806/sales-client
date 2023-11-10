@@ -1,0 +1,83 @@
+[
+	{
+		"id_prod": "1",
+		"name_prod": "Lenovo V15 Laptop, 15.6\" FHD Display, AMD Ryzen 5 5500U Hexa-core Processor (Beat Intel i7-1065G7), 16GB RAM, 1TB SSD, HDMI, RJ45, Numeric Keypad, Wi-Fi, Windows 11 Pro, Black",
+		"description": "16GB high-bandwidth RAM to smoothly run multiple applications and browser tabs all at once; 1TB PCIe NVMe M.2 Solid State Drive allows to fast bootup and data transfer </br>AMD Ryzen 5 5500U Processor (6 Cores, 12 Threads, 8MB L3 Cache, Clock Speed:2.1GHz, up to 4.0GHz Turbo)",
+		"unit": "laptop",
+		"price": 489.99,
+		"quantity": 2,
+		"image": "https://m.media-amazon.com/images/I/71aoL3LtkrL._AC_SX679_.jpg"
+	},
+	{
+		"id_prod": "2",
+		"name_prod": "ApoloSign 15.6'' Laptop Computer, Quad-Core Intel Celeron N5095 Processors, 12GB DDR4, 512GB SSD, 1080P FHD Display, Windows 11 Laptops Computers, Ultra Slim, 170° Open AngleI, Long Battery Life",
+		"description": "ApoloSign 15.6 inch laptop uses powerful Intel Celeron N5095 processor, frequency up to 2.8GHz, no latency, and powerful and faster than normal processors on the basic frequency. Equipped with the latest pre-installed Windows 11 system which is far more safer and faster than previous Windows systems. The perfect combination of performance, power consumption, and helps your device run smoothly and reliably to handle all your tasks. ",
+		"unit": "laptop",
+		"price": 296.99,
+		"quantity": 5,
+		"image": "https://m.media-amazon.com/images/I/71vEXQierYL._AC_SX522_.jpg"
+	},
+	{
+		"id_prod": "3",
+		"name_prod": "Lenovo IdeaPad 1 14 Laptop, 14.0\" HD Display, Intel Celeron N4020, 4GB RAM, 64GB Storage, Intel UHD Graphics 600, Win 11 in S Mode, Cloud Grey",
+		"description": "This everyday laptop is powered by an Intel Celeron N4020 processor, 4GB DDR4 RAM, and 64 GB M.2 PCIe SSD storage </br> Enjoy videos or browse online on a 14\" HD display panel, framed by narrow bezels </br>Dolby Audio delivers crystal-clear sound through the built-in dual stereo speakers",
+		"unit": "laptop",
+		"price": 169.99,
+		"quantity": 0,
+		"image": "https://m.media-amazon.com/images/I/71bphKmt0DL._AC_SX679_.jpg"
+	},
+	{
+		"id_prod": "4",
+		"name_prod": "Dell XPS 13 Laptop, 13.4\" 4K UHD+ InfinityEdge Touch Display, Intel Core i7-1165G7, 16GB RAM, 512GB SSD, Windows 11 Home, Platinum Silver",
+		"description": "Experience stunning visuals with the 13.4-inch 4K UHD+ InfinityEdge Touch Display; powered by an Intel Core i7-1165G7 processor, 16GB RAM, and a 512GB SSD for fast performance and ample storage.",
+		"unit": "laptop",
+		"price": 499.99,
+		"quantity": 8,
+		"image": "https://m.media-amazon.com/images/I/61kn7cyc46L._AC_SX679_.jpg"
+	},
+	{
+		"id_prod": "5",
+		"name_prod": "HP Spectre x360 2-in-1 Laptop, 13.3\" 4K OLED Touchscreen, Intel Evo Platform, Core i7-1165G7, 16GB RAM, 1TB SSD, Windows 11, Nightfall Black",
+		"description": "Versatile 2-in-1 design with a 13.3-inch 4K OLED touchscreen; powered by the Intel Evo Platform featuring a Core i7-1165G7 processor, 16GB RAM, and a spacious 1TB SSD for exceptional performance.",
+		"unit": "laptop",
+		"price": 699.99,
+		"quantity": 0,
+		"image": "https://m.media-amazon.com/images/I/619mqvTkxZL._AC_SX522_.jpg"
+	},
+	{
+		"id_prod": "6",
+		"name_prod": "ASUS ROG Strix G15 Gaming Laptop, 15.6\" 144Hz FHD Display, AMD Ryzen 7 5800H, 16GB DDR4, 1TB PCIe SSD, NVIDIA RTX 3070, RGB Keyboard, Windows 11",
+		"description": "Immerse yourself in gaming with the 15.6-inch 144Hz FHD display and powerful components, including an AMD Ryzen 7 5800H processor, 16GB DDR4 RAM, and NVIDIA RTX 3070 graphics; 1TB PCIe SSD for rapid storage access.",
+		"unit": "laptop",
+		"price": 899.99,
+		"quantity": 9,
+		"image": "https://m.media-amazon.com/images/I/711r+iB8DZL._AC_SX522_.jpg"
+	},
+    {
+		"id_prod": "7",
+		"name_prod": "Lenovo V15 Laptop, 15.6\" FHD Display, AMD Ryzen 5 5500U Hexa-core Processor (Beat Intel i7-1065G7), 16GB RAM, 1TB SSD, HDMI, RJ45, Numeric Keypad, Wi-Fi, Windows 11 Pro, Black",
+		"description": "16GB high-bandwidth RAM to smoothly run multiple applications and browser tabs all at once; 1TB PCIe NVMe M.2 Solid State Drive allows to fast bootup and data transfer </br>AMD Ryzen 5 5500U Processor (6 Cores, 12 Threads, 8MB L3 Cache, Clock Speed:2.1GHz, up to 4.0GHz Turbo)",
+		"unit": "laptop",
+		"price": 289.99,
+		"quantity": 5,
+		"image": "https://m.media-amazon.com/images/I/71aoL3LtkrL._AC_SX679_.jpg"
+	},
+	{
+		"id_prod": "8",
+		"name_prod": "ApoloSign 15.6'' Laptop Computer, Quad-Core Intel Celeron N5095 Processors, 12GB DDR4, 512GB SSD, 1080P FHD Display, Windows 11 Laptops Computers, Ultra Slim, 170° Open AngleI, Long Battery Life",
+		"description": "ApoloSign 15.6 inch laptop uses powerful Intel Celeron N5095 processor, frequency up to 2.8GHz, no latency, and powerful and faster than normal processors on the basic frequency. Equipped with the latest pre-installed Windows 11 system which is far more safer and faster than previous Windows systems. The perfect combination of performance, power consumption, and helps your device run smoothly and reliably to handle all your tasks. ",
+		"unit": "laptop",
+		"price": 316.99,
+		"quantity": 4,
+		"image": "https://m.media-amazon.com/images/I/71vEXQierYL._AC_SX522_.jpg"
+	},
+	{
+		"id_prod": "9",
+		"name_prod": "Lenovo IdeaPad 1 14 Laptop, 14.0\" HD Display, Intel Celeron N4020, 4GB RAM, 64GB Storage, Intel UHD Graphics 600, Win 11 in S Mode, Cloud Grey",
+		"description": "This everyday laptop is powered by an Intel Celeron N4020 processor, 4GB DDR4 RAM, and 64 GB M.2 PCIe SSD storage </br> Enjoy videos or browse online on a 14\" HD display panel, framed by narrow bezels </br>Dolby Audio delivers crystal-clear sound through the built-in dual stereo speakers",
+		"unit": "laptop",
+		"price": 469.99,
+		"quantity": 8,
+		"image": "https://m.media-amazon.com/images/I/71bphKmt0DL._AC_SX679_.jpg"
+	}
+]
