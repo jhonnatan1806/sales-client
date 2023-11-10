@@ -9,13 +9,14 @@ const QUEUE = "sale";
 const AMQP_URL = `amqp://${USER}:${PASSWORD}@${HOST}`;
 
 export async function POST(req: NextRequest) {
+
 	const body = (await req.json()) as CartItem[];
 	if (!body || !Array.isArray(body)) {
 		return NextResponse.json({ success: false, message: 'Request body or products are missing or not an array' });
 	}
 
 	const cartItem: CartItem[] = body;
-	const productsFacture = cartItem.map(({ product, quantity }: CartItem) => ({
+	const productos = cartItem.map(({ product, quantity }: CartItem) => ({
 		id_prod: product.id_prod,
 		name_prod: product.name_prod,
 		unit: product.unit,
@@ -23,16 +24,16 @@ export async function POST(req: NextRequest) {
 		quantity: quantity,
 	}));
 
-	const saleFacture = {
+	const ventas = {
 		usuario: {
 			nombres: 'Jonh',
 			apellidos: 'Doe',
 			ruc: '123456789',
 		},
-		productos: productsFacture,
+		productos: productos,
 	};
 
-	const message = JSON.stringify(saleFacture).toString();
+	const message = JSON.stringify(ventas).toString();
 
 	return new Promise((resolve, reject) => {
 		amqp.connect(`amqp://${HOST}`, function (error0: Error | null, connection: amqp.Connection) {

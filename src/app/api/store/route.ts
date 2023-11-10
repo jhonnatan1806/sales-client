@@ -7,6 +7,8 @@ const HOST = "localhost";
 const QUEUE = "store";
 const AMQP_URL = `amqp://${USER}:${PASSWORD}@${HOST}`;
 
+const MESSAGE = "getProductos";
+
 export async function GET() {
     return new Promise((resolve, reject) => {
         amqp.connect(`amqp://${HOST}`, function (error0: Error | null, connection: amqp.Connection) {
@@ -25,13 +27,16 @@ export async function GET() {
                     durable: false,
                 });
 
+                channel.sendToQueue(QUEUE, Buffer.from(MESSAGE));
+                    console.log(" [x] Sent %s", MESSAGE);
+
                 channel.consume(
                     QUEUE,
-                    function (msg: amqp.Message | null) {
-                        if (msg !== null) {
-                            console.log(' [x] Received %s', msg.content.toString());
+                    function (MESSAGE: amqp.Message | null) {
+                        if (MESSAGE !== null) {
+                            console.log(' [x] Received %s', MESSAGE.content.toString());
                             
-                            resolve(NextResponse.json({ message: msg.content.toString() }));
+                            resolve(NextResponse.json({ message: MESSAGE.content.toString() }));
                             channel.close( (err) => {
                                 if (err) {
                                     console.error(err);

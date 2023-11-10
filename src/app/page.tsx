@@ -1,13 +1,11 @@
 'use client';
 import { Suspense, useState, useEffect } from 'react';
-import { SfLoaderCircular } from '@storefront-ui/react';
+import { SfButton, SfLoaderCircular, SfIconPublishedWithChanges } from '@storefront-ui/react';
 import ProductCard from '@/components/ProductCard';
 import AlertPositive from '@/components/AlertPositive';
 import type { Product } from '@/utils/types';
 import { useCart } from '@/context/CartContext';
 import { useProduct } from '@/context/ProductContext';
-
-import dataStore from '@/data/store.json';
 
 export default function HomePage() {
 	const { state: cartState, dispatch: cartDispatch } = useCart();
@@ -27,6 +25,20 @@ export default function HomePage() {
 		}, time);
 	};
 
+    const handleGetProducts = async () => {
+        try {
+            const response = await fetch('http://localhost:3000/api/store/');
+            if (response.ok) {
+                const data = await response.json();
+                productDispatch({ type: 'UPDATE_PRODUCTS', payload: JSON.parse(data.message)})
+            } else {
+                console.error('Error:', response.status, response.statusText);
+            }
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    }
+/*
 	useEffect(() => {
         if (cartState.cart.length > 0) return;
 		const fetchData = async () => {
@@ -43,12 +55,13 @@ export default function HomePage() {
 			}
 		};
 		fetchData();
-	}, [productState.products]);
+	}, [productState.products]);*/
 
 	return (
 		<>
 			<main className="min-h-screen bg-gray-100 py-8">
-				<div className="flex flex-col gap-4 max-w-screen-md mx-auto">
+				<div className="flex flex-col items-end gap-4 max-w-screen-md mx-auto">
+                    <SfButton onClick={handleGetProducts} className='w-fit'> < SfIconPublishedWithChanges/>Get Products</SfButton>
 					<Suspense fallback={<SfLoaderCircular size="base" />}>
 						<div className="grid grid-cols-3 gap-4">
 							{productState.products.map((product) => (
