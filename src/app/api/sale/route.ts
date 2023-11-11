@@ -40,7 +40,7 @@ export async function POST(req: NextRequest) {
 	const message = JSON.stringify(sales).toString();
 
 	return new Promise((resolve, reject) => {
-		amqp.connect(`amqp://${HOST}`, function (error0: Error | null, connection: amqp.Connection) {
+		amqp.connect(AMQP_URL, function (error0: Error | null, connection: amqp.Connection) {
 			if (error0) {
 				reject(error0);
 				return;

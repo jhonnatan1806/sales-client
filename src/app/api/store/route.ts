@@ -5,13 +5,14 @@ const USER = "guess";
 const PASSWORD = "guess";
 const HOST = "localhost";
 const QUEUE = "almacen";
+const QUEUE_CLIENT = "cliente"
 const AMQP_URL = `amqp://${USER}:${PASSWORD}@${HOST}`;
 
 const MESSAGE = "getproductos";
 
 export async function GET() {
     return new Promise((resolve, reject) => {
-        amqp.connect(`amqp://${HOST}`, function (error0: Error | null, connection: amqp.Connection) {
+        amqp.connect(AMQP_URL, function (error0: Error | null, connection: amqp.Connection) {
             if (error0) {
                 reject(error0);
                 return;
@@ -32,7 +33,7 @@ export async function GET() {
                     console.log(" [x] Sent %s", MESSAGE);
 
                 channel.consume(
-                    QUEUE,
+                    QUEUE_CLIENT,
                     function (MESSAGE: amqp.Message | null) {
                         if (MESSAGE !== null) {
                             console.log(' [x] Received %s', MESSAGE.content.toString());
